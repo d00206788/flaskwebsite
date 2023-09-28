@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG3: Main Page</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+    <script type="text/javascript" src="../static/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Sans:wght@300&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/fr/d/dc/Baldur%27s_Gate_III_Logo.png" class="logo"></a>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            <p>by Larian Studios</p>
+            <h1>Baldur's Gate <span>3</span></h1>
+            <button onclick="myFunction()">Toggle text color</button>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="https://cmsapi.larian.com/uploads/image/63e4f002e1554.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About</h1>
+                <p>Baldur's Gate 3 is a role-playing video game developed and published by Larian Studios. It is the third main game in the Baldur's Gate series, based on the tabletop role-playing system of Dungeons & Dragons</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('gameplay')">Gameplay</p>
+                    <p class="tab-links" onclick="opentab('plot')">Plot</p>
+                </div>
+                <div class="tab-contents active-tab" id="plot">
+                    <p>The game is set in 1492 DR, over 120 years after the events of the previous game, Baldur's Gate II: Shadows of Amn, and months after the events of the playable Dungeons & Dragons 5e module, Baldur's Gate: Descent into Avernus. </p>
+                    <p>It features a branching plot where the main story elements stay mostly the same, regardless of the players' choices, but with considerable variation in the details, especially concerning the numerous side quests</p>
+                </div>
+                <div class="tab-contents" id="gameplay">
+                    <p>Baldur's Gate 3 is a role-playing video game with a single-player and cooperative multiplayer element.</p>
+                    <p>It has turn-based combat, similar to Larian's earlier games Divinity: Original Sin and Divinity: Original Sin II; all combat is based on the Dungeons & Dragons 5th Edition rules</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='..\static\js\script.js') }}"></script>
+
+</body>
+</html>
