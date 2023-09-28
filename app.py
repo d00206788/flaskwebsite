@@ -5,39 +5,37 @@ import sqlite3
 connection = sqlite3.connect("database.db")
 cursor =  connection.cursor()
 
+cursor.execute("create table classes (class_name text, extras integer)")
 
+# class_list = [
+#    ("Paladin", 4),
+#    ("Barbarian", 3),
+#    ("Bard",3),
+#    ("Cleric", 7),
+#    ("Druid", 3),
+#    ("Fighter", 3),
+#    ("Monk", 3),
+#    ("Ranger", 3),
+#    ("Rogue", 3),
+#    ("Sorcerer", 3),
+#    ("Warlock", 3),
+#    ("Wizard", 8)
 
-<! -- cursor.execute("create table classes (class_name text, extras integer)")
+# ]
 
-class_list = [
-   ("Paladin", 4),
-   ("Barbarian", 3),
-   ("Bard",3),
-   ("Cleric", 7),
-   ("Druid", 3),
-   ("Fighter", 3),
-   ("Monk", 3),
-   ("Ranger", 3),
-   ("Rogue", 3),
-   ("Sorcerer", 3),
-   ("Warlock", 3),
-   ("Wizard", 8)
+# cursor.executemany("insert into classes values (?, ?)", class_list)
 
-]
+# #print rows
+# print("****************************")
+# for row in cursor.execute("select * from classes"):
+#    print(row)
 
-cursor.executemany("insert into classes values (?, ?)", class_list)
+# #specific rows
+# cursor.execute("select * from classes where class_name =:c", {"c" : "Monk"})
+# classes_search = cursor.fetchall()
+# print(classes_search)
 
-#print rows
-print("****************************")
-for row in cursor.execute("select * from classes"):
-   print(row)
-
-#specific rows
-cursor.execute("select * from classes where class_name =:c", {"c" : "Monk"})
-classes_search = cursor.fetchall()
-print(classes_search)
-
-connection.close() --!>
+# connection.close()
 
 
 app = Flask(__name__)
