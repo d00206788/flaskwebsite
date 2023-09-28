@@ -5,7 +5,9 @@ import sqlite3
 connection = sqlite3.connect("database.db")
 cursor =  connection.cursor()
 
-cursor.execute("create table classes (class_name text, extras integer)")
+
+
+<! -- cursor.execute("create table classes (class_name text, extras integer)")
 
 class_list = [
    ("Paladin", 4),
@@ -35,7 +37,7 @@ cursor.execute("select * from classes where class_name =:c", {"c" : "Monk"})
 classes_search = cursor.fetchall()
 print(classes_search)
 
-connection.close()
+connection.close() --!>
 
 
 app = Flask(__name__)
