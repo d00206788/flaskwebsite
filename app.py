@@ -2,10 +2,10 @@ from flask import Flask, render_template, request
 
 import sqlite3
 
-connection = sqlite3.connect("database.db")
-cursor =  connection.cursor()
+# connection = sqlite3.connect("database.db")
+# cursor =  connection.cursor()
 
-cursor.execute("create table classes (class_name text, extras integer)")
+# cursor.execute("create table classes (class_name text, extras integer)")
 
 # class_list = [
 #    ("Paladin", 4),
